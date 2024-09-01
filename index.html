@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <title>Frontend Mentor | Contact form</title>
+
+ 
+</head>
+<body>
+ <div class="container">
+  <h1>Contact Us</h1>
+  <form action="">
+    <label for="fname">First name</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <span id="fnameerr">This field is required</span><br>
+    <label for="lname">Last name</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <span id="lnameerr">This field is required</span><br>
+    <label for="email">Email Address</label><br>
+    <input type="email" id="email" name="email"><br>
+    <span id="emailerr">Please enter a valid email address</span><br>
+    <label for="qtype">Query Type</label><br>
+    <input type="radio" id="qtype" name="qtype">General Enquiry</input>
+    <input type="radio" id="qtype2" name="qtype">Support Request</input><br>
+    <span id="qtypeerr">Please select a query type</span><br>
+    <label for="msg">Message</label><br>
+    <textarea id="msg" name="user_message"></textarea><br>
+    <span id="msgerr">This field is required</span><br>
+    <input type="checkbox" name="check" id="check" value="yes">
+    <label for="check">I consent to being contacted by the team</label><br>
+    <span id="checkerr">To submit this form, please consent to being contacted</span><br>
+    <input type="submit">
+
+  </form>
+
+ </div>
+
+<div class="success">
+  <img src="assets/images/icon-success-check.svg" alt="checkmark">
+  <h3>Message Sent!</h3>
+  <p>Thanks for completing the form. We'll be in touch soon!</p>
+</div>
+
+  
+  
+  
+
+</body>
+</html>
