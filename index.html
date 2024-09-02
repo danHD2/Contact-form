@@ -6,7 +6,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Contact form</title>
 
  
@@ -15,40 +18,66 @@
  <div class="container">
   <h1>Contact Us</h1>
   <form action="">
-    <label for="fname">First name</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <span id="fnameerr">This field is required</span><br>
-    <label for="lname">Last name</label><br>
-    <input type="text" id="lname" name="lname"><br>
-    <span id="lnameerr">This field is required</span><br>
-    <label for="email">Email Address</label><br>
-    <input type="email" id="email" name="email"><br>
-    <span id="emailerr">Please enter a valid email address</span><br>
-    <label for="qtype">Query Type</label><br>
-    <input type="radio" id="qtype" name="qtype">General Enquiry</input>
-    <input type="radio" id="qtype2" name="qtype">Support Request</input><br>
-    <span id="qtypeerr">Please select a query type</span><br>
-    <label for="msg">Message</label><br>
-    <textarea id="msg" name="user_message"></textarea><br>
-    <span id="msgerr">This field is required</span><br>
-    <input type="checkbox" name="check" id="check" value="yes">
-    <label for="check">I consent to being contacted by the team</label><br>
-    <span id="checkerr">To submit this form, please consent to being contacted</span><br>
-    <input type="submit">
+    <div class="first">
+      <div class="fname">
+        <label for="fname">First name<p class="star">*</p>
+        </label>
+        <input type="text" id="fname" name="fname">
+        <span id="fnameerr">This field is required</span>
+      </div>
+      <div class="lname">
+        <label for="lname">Last name<p class="star">*</p></label>
+        <input type="text" id="lname" name="lname">
+        <span id="lnameerr">This field is required</span>
+      </div>
+    </div>
+    <div class="email">
+      <label for="email">Email Address<p class="star">*</p></label>
+      <input type="email" id="email" name="email">
+      <span id="emailerr">Please enter a valid email address</span>
+    </div>
+    <div class="qtype"> 
+      <label for="qtype" id="qlabel">Query Type<p class="star">*</p></label>
+      <div id="qdiv">
+        <div class="qcont" id="qcont1">
+          <input type="radio" id="qtype" name="qtype">
+          <label for="qtype">General Enquiry</label>
+        </div>
+        <div class="qcont" id="qcont2">
+          <input type="radio" id="qtype2" name="qtype">
+          <label for="qtype2">Support Request</label>
+        </div>
+      </div>
+      <span id="qtypeerr">Please select a query type</span>
+    </div>
+    <div class="msg">
+      <label for="msg">Message<p class="star">*</p></label>
+      <textarea id="msg" name="user_message"></textarea>
+      <span id="msgerr">This field is required</span>
+    </div>
+    <div class="check">
+      <input type="checkbox" name="check" id="check" value="yes">
+      <label for="check">I consent to being contacted by the team<p class="star">*</p></label><br>
+      <span id="checkerr">To submit this form, please consent to being contacted</span>
+    </div>
+    <input type="submit" id="submit">
 
   </form>
 
  </div>
 
-<div class="success">
-  <img src="assets/images/icon-success-check.svg" alt="checkmark">
-  <h3>Message Sent!</h3>
+<div class="success" id="success">
+  <div class="frow">
+    <img src="assets/images/icon-success-check.svg" alt="checkmark">
+    <h3>Message Sent!</h3>
+  </div>
+  
   <p>Thanks for completing the form. We'll be in touch soon!</p>
 </div>
 
   
   
   
-
+<script src="script.js"></script>
 </body>
 </html>

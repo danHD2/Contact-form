@@ -45,24 +45,279 @@
     isolation: isolate;
   }
 
+
+  label { 
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+  
+  input[type=text]:focus-visible {
+    border: 1px solid hsl(169, 82%, 27%);
+    outline: none;
+  }
+
+  input[type=email]:focus-visible {
+    border: 1px solid hsl(169, 82%, 27%);
+    outline: none;
+  }
+
+  #msg:focus-visible {
+    border: 1px solid hsl(169, 82%, 27%);
+    outline: none;
+  }
+
+  input[type=text]:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+    outline: none;
+  }
+
+  input[type=email]:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+    outline: none;
+  }
+
+  #msg:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+    outline: none;
+  }
+
   body {
-    background-color: black;
+    background-color: hsl(148, 38%, 91%);
     display: flex;
     align-items: center;
     justify-content: center;   
     height: 100vh;
+    font-family: Karla, sans-serif;
+    font-size: 16px;
   }
 
   .container {
-    width: 500px;
+    width: 600px;
     background-color: white;
     border-radius: 10px;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    color:hsl(187, 24%, 22%);
   }
 
   .success {
     position: absolute;
     top: 50px;
     background-color: hsl(187, 24%, 22%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
   }
 
+  #success {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; 
+  }
+
+  .frow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+.frow img, h3 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.frow h3 {
+  font-weight: 700;
+  
+}
+
+.success p {
+  color: hsl(186, 15%, 59%);
+}
+
+.fname, .lname, .email, .msg {
+  display: flex;
+  flex-direction: column;
+}
+
+.qtype { 
+  display: block;
+  margin: 10px 5px 10px 5px;
+  border-color:  hsl(148, 38%, 91%);
+}
+
+.container span {
+  color: hsl(0, 66%, 54%);
+  }
+
+  #fnameerr, #lnameerr, #emailerr, #qtypeerr, #msgerr, #checkerr {
+    display: none;
+  }
+
+.first {
+  display: flex;
+  width: 100%;
+}
+
+.fname, .lname {
+  margin: 10px 5px 10px 5px;
+  width: 50%;
+}
+
+.email {
+  margin: 10px 5px 10px 5px;
+}
+
+.fname input, .lname input, .email input {
+  margin: 5px 0 5px 0;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: hsl(186, 15%, 59%);
+  height: 35px;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 10px;
+}
+
+.qcont {
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 5px;
+  width: 50%;
+  margin: 10px 0px 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.qcontfocused {
+  background-color: hsl(148, 38%, 91%);
+  border: 1px solid hsl(169, 82%, 27%);
+}
+
+.qcont input {
+  height: 35px;
+  margin: 0 10px 0 10px;
+  accent-color: hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+
+#qlabel {
+  display: block;
+}
+
+#qdiv {
+  display: flex;
+}
+
+#qcont1 {
+  margin-right: 5px;
+}
+
+#qcont2 {
+  margin-left: 5px;
+}
+
+.msg {
+  margin: 10px 5px 30px 5px;
+}
+
+#msg {
+  margin: 10px 0 10px 0;
+  height: 100px;
+  border-radius: 10px;
+  resize: none;
+  border-color: hsl(187, 24%, 22%);
+}
+
+.check {
+  margin: 0 5px 30px 5px;
+  cursor: pointer;
+}
+
+#submit {
+  width: 100%;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color:hsl(187, 24%, 22%) ;
+}
+
+#check {
+  accent-color: hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+
+.errborder {
+  border-color: hsl(0, 66%, 54%);
+}
+
+#fname, #lname, #email, #msg {
+  color: hsl(169, 82%, 27%);
+}
+
+.star {
+  color: hsl(169, 82%, 27%);
+  display: inline-block;
+  padding-left: 5px;
+}
+
+@media screen and (max-width: 400px) { 
+  
+  .container {
+    width: 90%;
+  }
+  
+  .first {
+    flex-direction: column;
+  }
+
+  .fname, .lname {
+    width: 100%;
+    margin: 10px 0 10px ;
+  }
+
+  .email {
+    margin: 10px 0 10px 0;
+  }
+
+  .qtype {
+    margin: 10px 0 10px 0;
+
+  }
+
+  #qdiv {
+    flex-direction: column;
+  }
+
+  .qcont {
+    width: 100%;
+ 
+  }
+
+  #qcont1 {
+    margin-right: 0;
+  }
+
+  #qcont2 {
+    margin-left: 0;
+
+  }
+
+#msg {
+  height: 200px;
+}
+
+}
